@@ -57,7 +57,6 @@ C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\bin\Debug\n
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.csproj.AssemblyReference.cache
-C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Form1.resources
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.csproj.GenerateResource.cache
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.AssemblyInfoInputs.cache
@@ -69,3 +68,9 @@ C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\n
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.pdb
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.genruntimeconfig.cache
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\ref\PET_SHOP_MANAGER.dll
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Login.resources
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Properties.Resources.resources
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Home.resources
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.AddProductType.resources
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Employee.resources
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Product.resources
