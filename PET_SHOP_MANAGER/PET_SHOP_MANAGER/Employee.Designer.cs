@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.elipseControl8 = new ElipseTool.ElipseControl();
-            this.elipseControl9 = new ElipseTool.ElipseControl();
-            this.elipseControl2 = new ElipseTool.ElipseControl();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.elipseControl3 = new ElipseTool.ElipseControl();
-            this.elipseControl4 = new ElipseTool.ElipseControl();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.vbButton6 = new CustomButton.VBButton();
             this.vbButton5 = new CustomButton.VBButton();
             this.vbButton4 = new CustomButton.VBButton();
@@ -41,8 +49,6 @@
             this.vbButton2 = new CustomButton.VBButton();
             this.vbButton1 = new CustomButton.VBButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.elipseControl10 = new ElipseTool.ElipseControl();
-            this.elipseControl1 = new ElipseTool.ElipseControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.vbButton8 = new CustomButton.VBButton();
             this.vbButton7 = new CustomButton.VBButton();
@@ -58,55 +64,142 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.elipseControl5 = new ElipseTool.ElipseControl();
-            this.elipseControl6 = new ElipseTool.ElipseControl();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // elipseControl8
-            // 
-            this.elipseControl8.CornerRadius = 35;
-            this.elipseControl8.TargetControl = null;
-            // 
-            // elipseControl9
-            // 
-            this.elipseControl9.CornerRadius = 35;
-            this.elipseControl9.TargetControl = null;
-            // 
-            // elipseControl2
-            // 
-            this.elipseControl2.CornerRadius = 35;
-            this.elipseControl2.TargetControl = this.panel1;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Location = new System.Drawing.Point(255, 229);
+            this.panel1.Location = new System.Drawing.Point(255, 297);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(825, 322);
+            this.panel1.Size = new System.Drawing.Size(927, 322);
             this.panel1.TabIndex = 9;
             // 
-            // elipseControl3
+            // dataGridView1
             // 
-            this.elipseControl3.CornerRadius = 30;
-            this.elipseControl3.TargetControl = null;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 82);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(893, 230);
+            this.dataGridView1.TabIndex = 16;
             // 
-            // elipseControl4
+            // Column1
             // 
-            this.elipseControl4.CornerRadius = 35;
-            this.elipseControl4.TargetControl = null;
+            this.Column1.HeaderText = "Full Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Phone";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Email";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Sex";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Address";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "DataOfBirth";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Status";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(310, 36);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 17);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Email";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(37, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 17);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Full Name";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(396, 30);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(162, 27);
+            this.textBox6.TabIndex = 14;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(123, 30);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(162, 27);
+            this.textBox5.TabIndex = 14;
             // 
             // vbButton6
             // 
@@ -226,20 +319,14 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
-            // elipseControl10
-            // 
-            this.elipseControl10.CornerRadius = 30;
-            this.elipseControl10.TargetControl = null;
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 35;
-            this.elipseControl1.TargetControl = this;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.vbButton8);
             this.panel2.Controls.Add(this.vbButton7);
             this.panel2.Controls.Add(this.radioButton2);
@@ -257,7 +344,7 @@
             this.panel2.Location = new System.Drawing.Point(255, 44);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(825, 173);
+            this.panel2.Size = new System.Drawing.Size(927, 185);
             this.panel2.TabIndex = 17;
             // 
             // vbButton8
@@ -295,6 +382,7 @@
             this.vbButton7.Text = "ADD";
             this.vbButton7.TextColor = System.Drawing.Color.White;
             this.vbButton7.UseVisualStyleBackColor = false;
+            this.vbButton7.Click += new System.EventHandler(this.vbButton7_Click);
             // 
             // radioButton2
             // 
@@ -357,7 +445,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(562, 26);
+            this.label3.Location = new System.Drawing.Point(617, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 5;
@@ -365,7 +453,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(625, 20);
+            this.textBox3.Location = new System.Drawing.Point(680, 16);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(162, 27);
             this.textBox3.TabIndex = 4;
@@ -383,7 +471,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(361, 20);
+            this.textBox2.Location = new System.Drawing.Point(396, 16);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(162, 27);
             this.textBox2.TabIndex = 2;
@@ -406,56 +494,58 @@
             this.textBox1.Size = new System.Drawing.Size(162, 27);
             this.textBox1.TabIndex = 0;
             // 
-            // elipseControl5
+            // label8
             // 
-            this.elipseControl5.CornerRadius = 35;
-            this.elipseControl5.TargetControl = this.panel2;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(565, 250);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(197, 35);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Employee List";
             // 
-            // elipseControl6
+            // label9
             // 
-            this.elipseControl6.CornerRadius = 30;
-            this.elipseControl6.TargetControl = this.pictureBox2;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(310, 145);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 17);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Password";
             // 
-            // label6
+            // textBox7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(37, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 17);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Full Name";
+            this.textBox7.Location = new System.Drawing.Point(396, 139);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.PasswordChar = '*';
+            this.textBox7.Size = new System.Drawing.Size(162, 27);
+            this.textBox7.TabIndex = 14;
             // 
-            // textBox5
+            // label10
             // 
-            this.textBox5.Location = new System.Drawing.Point(123, 30);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 27);
-            this.textBox5.TabIndex = 14;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(37, 145);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 17);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "UserName";
             // 
-            // label7
+            // textBox8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(310, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 17);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Email";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(396, 30);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(162, 27);
-            this.textBox6.TabIndex = 14;
+            this.textBox8.Location = new System.Drawing.Point(123, 139);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(162, 27);
+            this.textBox8.TabIndex = 16;
             // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(1116, 576);
+            this.ClientSize = new System.Drawing.Size(1199, 632);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.vbButton6);
             this.Controls.Add(this.vbButton5);
@@ -467,20 +557,20 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Employee";
-            this.Text = "Employee";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.Employee_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private ElipseTool.ElipseControl elipseControl8;
-        private ElipseTool.ElipseControl elipseControl9;
         private ElipseTool.ElipseControl elipseControl2;
         private System.Windows.Forms.Panel panel1;
         private ElipseTool.ElipseControl elipseControl3;
@@ -492,15 +582,11 @@
         private CustomButton.VBButton vbButton2;
         private CustomButton.VBButton vbButton1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private ElipseTool.ElipseControl elipseControl10;
-        private ElipseTool.ElipseControl elipseControl1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private ElipseTool.ElipseControl elipseControl5;
-        private ElipseTool.ElipseControl elipseControl6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
@@ -515,5 +601,18 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }

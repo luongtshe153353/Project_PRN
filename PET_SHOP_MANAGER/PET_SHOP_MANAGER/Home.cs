@@ -12,11 +12,15 @@ namespace PET_SHOP_MANAGER
 {
     public partial class Home : Form
     {
+        public int id;
         public Home()
         {
             InitializeComponent();
         }
-
+        public Home(int id)
+        {
+            this.id = id;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -24,7 +28,7 @@ namespace PET_SHOP_MANAGER
 
         private void Home_Load(object sender, EventArgs e)
         {
-
+            label12.Text = id.ToString();
         }
 
         private void label3_Click(object sender, EventArgs e)

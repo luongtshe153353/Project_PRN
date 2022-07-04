@@ -390,17 +390,15 @@
             // elipseControl1
             // 
             this.elipseControl1.CornerRadius = 35;
-            this.elipseControl1.TargetControl = this.panel2;
+            
             // 
             // elipseControl2
             // 
             this.elipseControl2.CornerRadius = 35;
-            this.elipseControl2.TargetControl = this.panel1;
             // 
             // elipseControl3
             // 
             this.elipseControl3.CornerRadius = 35;
-            this.elipseControl3.TargetControl = this;
             // 
             // label6
             // 

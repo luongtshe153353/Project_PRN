@@ -19,6 +19,7 @@ namespace PET_SHOP_MANAGER.Models
         public int? Price { get; set; }
         public int? Type { get; set; }
         public bool? Status { get; set; }
+        public DateTime? Dateofbirth { get; set; }
 
         public virtual TypeProduct TypeNavigation { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -29,7 +30,8 @@ namespace PET_SHOP_MANAGER.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                
+                var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+                optionsBuilder.UseSqlServer(config.GetConnectionString("DeDoc"));
             }
         }
 
@@ -146,6 +148,10 @@ namespace PET_SHOP_MANAGER.Models
                 entity.ToTable("Product");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Dateofbirth)
+                    .HasColumnType("date")
+                    .HasColumnName("dateofbirth");
 
                 entity.Property(e => e.Name).HasMaxLength(50);
 

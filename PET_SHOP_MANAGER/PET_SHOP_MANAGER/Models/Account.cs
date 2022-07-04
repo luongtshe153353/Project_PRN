@@ -12,6 +12,16 @@ namespace PET_SHOP_MANAGER.Models
             InforAccounts = new HashSet<InforAccount>();
         }
 
+        public Account(int id, string username, string password, int? role, bool? status, ICollection<InforAccount> inforAccounts)
+        {
+            Id = id;
+            Username = username;
+            Password = password;
+            Role = role;
+            Status = status;
+            InforAccounts = inforAccounts;
+        }
+
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }

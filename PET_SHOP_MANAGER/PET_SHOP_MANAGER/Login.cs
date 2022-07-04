@@ -1,4 +1,5 @@
 ﻿using System;
+using PET_SHOP_MANAGER.Models;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,28 @@ namespace PET_SHOP_MANAGER
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+            string username = textBox1.Text;
+            string password = textBox2.Text;
+            using(var context = new PET_SHOP_MANAGERContext())
+            {
+                List<Account> list =context.Accounts.Where(x => x.Username == username && x.Password == password).ToList();
+                if(list.Count == 0)
+                {
+                    MessageBox.Show("Ten Dang Nhap Hoac Mat Khau Khong Dung !!!");
+                }
+                else
+                {
+                    int id = list[0].Id;
+                    Home form = new Home(id);
+                    form.Show();
+                }
+                
+            }
+           
         }
     }
 }
