@@ -19,7 +19,7 @@ namespace PET_SHOP_MANAGER
             InitializeComponent();
         }
         public int role=2;
-        public int idacc=3;
+        public int idacc=8;
         public int IdSelect=3 ;
         public void Form_Load()
         {
@@ -34,7 +34,7 @@ namespace PET_SHOP_MANAGER
                     {
                     foreach (InforAccount emp in listInfo)
                     {
-                        dataGridView1.Rows.Add(emp.Fullname, emp.Phone, emp.Email, emp.Sex, emp.Address, emp.DateofBirth, emp.Status);
+                        dataGridView1.Rows.Add(emp.Id,emp.Fullname, emp.Phone, emp.Email, emp.Sex, emp.Address, emp.DateofBirth, emp.Status);
 
                     }
                     }
@@ -101,7 +101,7 @@ namespace PET_SHOP_MANAGER
             
             Account a = new Account();
             
-            a.Username = name.Replace(" ", "");
+            a.Username = phone;
             a.Password = "1234";
             a.Role = 2;
             a.Status = true;
@@ -141,8 +141,35 @@ namespace PET_SHOP_MANAGER
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int select = dataGridView1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectRow = dataGridView1.Rows[select];
+                string cellvalue = Convert.ToString(selectRow.Cells["Id"].Value);
+                using (var context = new PET_SHOP_MANAGERContext())
+                    {
+                        IdSelect = int.Parse(cellvalue);
+                        List<InforAccount> list = context.InforAccounts.Where(x => x.Id == IdSelect).ToList();
+                         textBox1.Text;
+                         textBox2.Text;
+                         textBox3.Text;
+                         textBox4.Text;
+                         dateTimePicker1.Value;
+                        bool sex;
+                        if (radioButton1.Checked)
+                        {
+                            sex = true;
+                        }
+                        else
+                        {
+                            sex = false;
+                        }
 
-        }
+                    }
+
+                }
+            }
 
         private void vbButton9_Click(object sender, EventArgs e)
         {
@@ -168,7 +195,7 @@ namespace PET_SHOP_MANAGER
             
             using(var context = new PET_SHOP_MANAGERContext())
             {
-                List<InforAccount> list = context.InforAccounts.Where(x => x.Id == idacc).ToList();
+                List<InforAccount> list = context.InforAccounts.Where(x => x.Id == IdSelect).ToList();
                 InforAccount info = new InforAccount();
                 foreach (var account in list)
                 {

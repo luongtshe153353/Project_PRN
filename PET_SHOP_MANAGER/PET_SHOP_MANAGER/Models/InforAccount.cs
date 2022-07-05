@@ -37,5 +37,10 @@ namespace PET_SHOP_MANAGER.Models
 
         public virtual Account IdaccNavigation { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
+
+        public override string ToString()
+        {
+            return "id:" + Id + " Idacc:" + Idacc + " Fullname:" + Fullname + " phone:" + Phone + " Email:" + Email + " Sex:" + Sex + " Address:" + Address + " birth:" + DateofBirth + " status:" + Status;
+        }
     }
 }
