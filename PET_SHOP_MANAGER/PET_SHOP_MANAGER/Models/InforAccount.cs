@@ -7,9 +7,22 @@ namespace PET_SHOP_MANAGER.Models
 {
     public partial class InforAccount
     {
+        internal static object context;
+
         public InforAccount()
         {
             Orders = new HashSet<Order>();
+        }
+
+        public InforAccount(int id, string fullname, string phone, string email, bool? sex, string address, DateTime? dateofBirth)
+        {
+            Id = id;
+            Fullname = fullname;
+            Phone = phone;
+            Email = email;
+            Sex = sex;
+            Address = address;
+            DateofBirth = dateofBirth;
         }
 
         public int Id { get; set; }

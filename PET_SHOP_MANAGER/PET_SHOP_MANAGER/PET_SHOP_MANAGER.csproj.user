@@ -4,6 +4,9 @@
     <Compile Update="AddProductType.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CSS\ElipseControl.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +50,7 @@
             this.vbButton1 = new CustomButton.VBButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.vbButton9 = new CustomButton.VBButton();
             this.vbButton8 = new CustomButton.VBButton();
             this.vbButton7 = new CustomButton.VBButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -65,10 +66,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -89,18 +86,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(927, 322);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -113,10 +112,13 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.Location = new System.Drawing.Point(21, 82);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(893, 230);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(877, 230);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -165,6 +167,7 @@
             this.Column7.HeaderText = "Status";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column7.Width = 125;
             // 
             // label7
@@ -323,10 +326,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.vbButton9);
             this.panel2.Controls.Add(this.vbButton8);
             this.panel2.Controls.Add(this.vbButton7);
             this.panel2.Controls.Add(this.radioButton2);
@@ -347,6 +347,25 @@
             this.panel2.Size = new System.Drawing.Size(927, 185);
             this.panel2.TabIndex = 17;
             // 
+            // vbButton9
+            // 
+            this.vbButton9.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton9.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton9.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton9.BorderRadius = 20;
+            this.vbButton9.BorderSize = 0;
+            this.vbButton9.FlatAppearance.BorderSize = 0;
+            this.vbButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton9.ForeColor = System.Drawing.Color.White;
+            this.vbButton9.Location = new System.Drawing.Point(748, 134);
+            this.vbButton9.Name = "vbButton9";
+            this.vbButton9.Size = new System.Drawing.Size(176, 36);
+            this.vbButton9.TabIndex = 14;
+            this.vbButton9.Text = "CHANGE PASSWORD";
+            this.vbButton9.TextColor = System.Drawing.Color.White;
+            this.vbButton9.UseVisualStyleBackColor = false;
+            this.vbButton9.Click += new System.EventHandler(this.vbButton9_Click);
+            // 
             // vbButton8
             // 
             this.vbButton8.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -357,13 +376,14 @@
             this.vbButton8.FlatAppearance.BorderSize = 0;
             this.vbButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton8.ForeColor = System.Drawing.Color.White;
-            this.vbButton8.Location = new System.Drawing.Point(689, 134);
+            this.vbButton8.Location = new System.Drawing.Point(644, 134);
             this.vbButton8.Name = "vbButton8";
             this.vbButton8.Size = new System.Drawing.Size(98, 36);
             this.vbButton8.TabIndex = 13;
             this.vbButton8.Text = "UPDATE";
             this.vbButton8.TextColor = System.Drawing.Color.White;
             this.vbButton8.UseVisualStyleBackColor = false;
+            this.vbButton8.Click += new System.EventHandler(this.vbButton8_Click);
             // 
             // vbButton7
             // 
@@ -375,7 +395,7 @@
             this.vbButton7.FlatAppearance.BorderSize = 0;
             this.vbButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton7.ForeColor = System.Drawing.Color.White;
-            this.vbButton7.Location = new System.Drawing.Point(586, 134);
+            this.vbButton7.Location = new System.Drawing.Point(539, 134);
             this.vbButton7.Name = "vbButton7";
             this.vbButton7.Size = new System.Drawing.Size(97, 36);
             this.vbButton7.TabIndex = 12;
@@ -504,41 +524,6 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Employee List";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(310, 145);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 17);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Password";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(396, 139);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.PasswordChar = '*';
-            this.textBox7.Size = new System.Drawing.Size(162, 27);
-            this.textBox7.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(37, 145);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 17);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "UserName";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(123, 139);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(162, 27);
-            this.textBox8.TabIndex = 16;
-            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -603,6 +588,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label8;
+        private CustomButton.VBButton vbButton9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -610,9 +596,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
     }
 }

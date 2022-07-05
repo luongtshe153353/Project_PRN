@@ -13,29 +13,54 @@ namespace PET_SHOP_MANAGER
 {
     public partial class Employee : Form
     {
+
         public Employee()
         {
             InitializeComponent();
         }
-
+        public int role=2;
+        public int idacc=3;
+        public int IdSelect=3 ;
         public void Form_Load()
         {
             dataGridView1.Rows.Clear();
-            using (var context = new PET_SHOP_MANAGERContext())
-            {
+            
+                using (var context = new PET_SHOP_MANAGERContext())
+                {
 
-                List<InforAccount> listInfo = context.InforAccounts.ToList();
-                List<Account> listAcc = new List<Account>();
-                foreach (Account emp in listAcc)
-                {
-                    InforAccount account = (InforAccount)context.InforAccounts.Where(x => x.Idacc == emp.Id);
-                    listInfo.Add(account);
+                    List<InforAccount> listInfo = context.InforAccounts.ToList();
+                    
+                    if(role == 1)
+                    {
+                    foreach (InforAccount emp in listInfo)
+                    {
+                        dataGridView1.Rows.Add(emp.Fullname, emp.Phone, emp.Email, emp.Sex, emp.Address, emp.DateofBirth, emp.Status);
+
+                    }
+                    }
+                    if(role == 2)
+                    {
+                    List<InforAccount> info = context.InforAccounts.Where(x => x.Idacc == idacc).ToList();
+                    foreach(InforAccount emp in info)
+                    {
+                        textBox1.Text = emp.Fullname;
+                        textBox2.Text = emp.Phone;
+                        textBox3.Text = emp.Address;
+                        textBox4.Text = emp.Email;
+                        dateTimePicker1.Value = DateTime.Parse(emp.DateofBirth.ToString());
+                        if (emp.Sex == true)
+                        {
+                            radioButton1.Checked = true;
+                        }
+                        if (emp.Sex == false)
+                        {
+                            radioButton2.Checked = true;
+                        }
+                    }
+                    vbButton7.Visible = false; ;
+                    }
+                   
                 }
-                foreach (InforAccount emp in listInfo)
-                {
-                    dataGridView1.Rows.Add(emp.Fullname, emp.Phone, emp.Email, emp.Sex, emp.Address, emp.DateofBirth, emp.Status);
-                }
-            }
         }
         private void Employee_Load(object sender, EventArgs e)
         {
@@ -73,11 +98,11 @@ namespace PET_SHOP_MANAGER
             {
                 sex=false;
             }
-            string username = textBox8.Text;
-            string password = textBox7.Text;
+            
             Account a = new Account();
-            a.Username = username;
-            a.Password = password;
+            
+            a.Username = name.Replace(" ", "");
+            a.Password = "1234";
             a.Role = 2;
             a.Status = true;
             using(var context = new PET_SHOP_MANAGERContext())
@@ -88,7 +113,7 @@ namespace PET_SHOP_MANAGER
             }
             using(var context = new PET_SHOP_MANAGERContext())
             {
-                List<Account> list = context.Accounts.Where(x => x.Username == username && x.Password == password).ToList();
+                List<Account> list = context.Accounts.Where(x => x.Username == a.Username && x.Password == a.Password).ToList();
                 InforAccount info = new InforAccount();
                 Account ac = new Account();
                 foreach(Account account in list)
@@ -107,6 +132,59 @@ namespace PET_SHOP_MANAGER
                 context.SaveChanges();
                 Form_Load();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void vbButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vbButton8_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            string phone = textBox2.Text;
+            string address = textBox3.Text;
+            string email = textBox4.Text;
+            DateTime birth = dateTimePicker1.Value;
+            bool sex;
+            if (radioButton1.Checked)
+            {
+                sex = true;
+            }
+            else
+            {
+                sex = false;
+            }
+            
+            using(var context = new PET_SHOP_MANAGERContext())
+            {
+                List<InforAccount> list = context.InforAccounts.Where(x => x.Id == idacc).ToList();
+                InforAccount info = new InforAccount();
+                foreach (var account in list)
+                {
+                    info = account;
+                }
+                info.Fullname = name;
+                info.Phone = phone;
+                info.Address = address; 
+                info.Email = email;
+                info.DateofBirth = birth;
+                info.Sex = sex;
+                context.InforAccounts.Update(info);
+                context.SaveChanges();
+                Form_Load();
+            }
+
         }
     }
 }
