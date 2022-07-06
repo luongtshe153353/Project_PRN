@@ -16,5 +16,15 @@ namespace PET_SHOP_MANAGER
         {
             InitializeComponent();
         }
+
+        private void Product_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

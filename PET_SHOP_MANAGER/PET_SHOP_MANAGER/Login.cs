@@ -47,8 +47,11 @@ namespace PET_SHOP_MANAGER
                 else
                 {
                     int id = list[0].Id;
-                    Home form = new Home(id);
+                    int role = (int)list[0].Role;
+                    Home form = new Home(id,role);
                     form.Show();
+                    Login formClose = new Login();
+                    formClose.Close();
                 }
                 
             }
@@ -56,6 +59,11 @@ namespace PET_SHOP_MANAGER
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

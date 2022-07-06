@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.elipseControl1 = new ElipseTool.ElipseControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,11 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 35;
-            this.elipseControl1.TargetControl = this;
             // 
             // pictureBox1
             // 
@@ -166,6 +160,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
             this.UseWaitCursor = true;
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -174,8 +169,6 @@
         }
 
         #endregion
-
-        private ElipseTool.ElipseControl elipseControl1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;

@@ -13,14 +13,16 @@ namespace PET_SHOP_MANAGER
 {
     public partial class Employee : Form
     {
-
-        public Employee()
+        public int role;
+        public int idacc;
+        public int IdSelect;
+        public Employee(int id,int role)
         {
+            this.idacc = id;    
+            this.role = role;
             InitializeComponent();
         }
-        public int role=2;
-        public int idacc=8;
-        public int IdSelect=3 ;
+        
         public void Form_Load()
         {
             dataGridView1.Rows.Clear();
@@ -141,31 +143,36 @@ namespace PET_SHOP_MANAGER
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int idacc;
             if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
             if (dataGridView1.SelectedCells.Count > 0)
             {
                 int select = dataGridView1.SelectedCells[0].RowIndex;
                 DataGridViewRow selectRow = dataGridView1.Rows[select];
-                string cellvalue = Convert.ToString(selectRow.Cells["Id"].Value);
+                string cellvalue = Convert.ToString(selectRow.Cells["Column8"].Value);
                 using (var context = new PET_SHOP_MANAGERContext())
                     {
                         IdSelect = int.Parse(cellvalue);
                         List<InforAccount> list = context.InforAccounts.Where(x => x.Id == IdSelect).ToList();
-                         textBox1.Text;
-                         textBox2.Text;
-                         textBox3.Text;
-                         textBox4.Text;
-                         dateTimePicker1.Value;
-                        bool sex;
-                        if (radioButton1.Checked)
+                    foreach (var account in list)
+                    {
+
+                        idacc = int.Parse(account.Idacc.ToString());
+                        textBox1.Text = account.Fullname;
+                        textBox2.Text = account.Phone;
+                        textBox3.Text= account.Address;
+                        textBox4.Text = account.Email;
+                        dateTimePicker1.Value = DateTime.Parse(account.DateofBirth.ToString());
+                        bool sex = bool.Parse(account.Sex.ToString());
+                        if (sex==true)
                         {
-                            sex = true;
+                            radioButton1.Checked=true;
                         }
                         else
                         {
-                            sex = false;
+                            radioButton2.Checked=true;
                         }
-
+                    }
                     }
 
                 }
@@ -173,7 +180,15 @@ namespace PET_SHOP_MANAGER
 
         private void vbButton9_Click(object sender, EventArgs e)
         {
-
+            if(role == 1)
+            {
+               ChangePassword form = new ChangePassword(idacc,1);
+               form.Show();
+            }
+            if(role == 2)
+            {
+                
+            }
         }
 
         private void vbButton8_Click(object sender, EventArgs e)
@@ -212,6 +227,48 @@ namespace PET_SHOP_MANAGER
                 Form_Load();
             }
 
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            if (role == 1)
+            {
+            
+            string name = textBox5.Text;
+            string phone = textBox6.Text;
+            using (var context = new PET_SHOP_MANAGERContext())
+            {
+                List<InforAccount> list = context.InforAccounts.Where(x => x.Fullname.Contains(name) && x.Phone.Contains(phone)).ToList();
+                foreach (InforAccount emp in list)
+                {
+                       
+                    dataGridView1.Rows.Add(emp.Id, emp.Fullname, emp.Phone, emp.Email, emp.Sex, emp.Address, emp.DateofBirth, emp.Status);
+
+                }
+            }
+            }
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            if (role == 1)
+            {
+
+                string name = textBox5.Text;
+                string phone = textBox6.Text;
+                using (var context = new PET_SHOP_MANAGERContext())
+                {
+                    List<InforAccount> list = context.InforAccounts.Where(x => x.Fullname.Contains(name) && x.Phone.Contains(phone)).ToList();
+                    foreach (InforAccount emp in list)
+                    {
+
+                        dataGridView1.Rows.Add(emp.Id, emp.Fullname, emp.Phone, emp.Email, emp.Sex, emp.Address, emp.DateofBirth, emp.Status);
+
+                    }
+                }
+            }
         }
     }
 }

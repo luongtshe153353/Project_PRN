@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.elipseControl1 = new ElipseTool.ElipseControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -48,9 +47,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.elipseControl2 = new ElipseTool.ElipseControl();
-            this.elipseControl3 = new ElipseTool.ElipseControl();
-            this.elipseControl4 = new ElipseTool.ElipseControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.vbButton1 = new CustomButton.VBButton();
             this.vbButton2 = new CustomButton.VBButton();
@@ -58,11 +54,6 @@
             this.vbButton4 = new CustomButton.VBButton();
             this.vbButton5 = new CustomButton.VBButton();
             this.vbButton6 = new CustomButton.VBButton();
-            this.elipseControl5 = new ElipseTool.ElipseControl();
-            this.elipseControl6 = new ElipseTool.ElipseControl();
-            this.elipseControl7 = new ElipseTool.ElipseControl();
-            this.elipseControl8 = new ElipseTool.ElipseControl();
-            this.elipseControl9 = new ElipseTool.ElipseControl();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -72,11 +63,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 35;
-            this.elipseControl1.TargetControl = this;
             // 
             // panel1
             // 
@@ -268,21 +254,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DOG";
             // 
-            // elipseControl2
-            // 
-            this.elipseControl2.CornerRadius = 35;
-            this.elipseControl2.TargetControl = this.panel1;
-            // 
-            // elipseControl3
-            // 
-            this.elipseControl3.CornerRadius = 30;
-            this.elipseControl3.TargetControl = null;
-            // 
-            // elipseControl4
-            // 
-            this.elipseControl4.CornerRadius = 0;
-            this.elipseControl4.TargetControl = null;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PET_SHOP_MANAGER.Properties.Resources.Pet_shop_logo_generated;
@@ -346,6 +317,7 @@
             this.vbButton3.Text = "EMPLOYEE";
             this.vbButton3.TextColor = System.Drawing.Color.White;
             this.vbButton3.UseVisualStyleBackColor = false;
+            this.vbButton3.Click += new System.EventHandler(this.vbButton3_Click);
             // 
             // vbButton4
             // 
@@ -400,31 +372,6 @@
             this.vbButton6.Text = "LOGOUT";
             this.vbButton6.TextColor = System.Drawing.Color.White;
             this.vbButton6.UseVisualStyleBackColor = false;
-            // 
-            // elipseControl5
-            // 
-            this.elipseControl5.CornerRadius = 30;
-            this.elipseControl5.TargetControl = this.panel1;
-            // 
-            // elipseControl6
-            // 
-            this.elipseControl6.CornerRadius = 35;
-            this.elipseControl6.TargetControl = this.panel2;
-            // 
-            // elipseControl7
-            // 
-            this.elipseControl7.CornerRadius = 35;
-            this.elipseControl7.TargetControl = this.panel3;
-            // 
-            // elipseControl8
-            // 
-            this.elipseControl8.CornerRadius = 35;
-            this.elipseControl8.TargetControl = this.panel4;
-            // 
-            // elipseControl9
-            // 
-            this.elipseControl9.CornerRadius = 35;
-            this.elipseControl9.TargetControl = this.panel5;
             // 
             // label12
             // 
@@ -481,12 +428,7 @@
         }
 
         #endregion
-
-        private ElipseTool.ElipseControl elipseControl1;
         private System.Windows.Forms.Panel panel1;
-        private ElipseTool.ElipseControl elipseControl2;
-        private ElipseTool.ElipseControl elipseControl3;
-        private ElipseTool.ElipseControl elipseControl4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private CustomButton.VBButton vbButton6;
         private CustomButton.VBButton vbButton5;
@@ -503,14 +445,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private ElipseTool.ElipseControl elipseControl5;
-        private ElipseTool.ElipseControl elipseControl6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private ElipseTool.ElipseControl elipseControl7;
-        private ElipseTool.ElipseControl elipseControl8;
-        private ElipseTool.ElipseControl elipseControl9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label10;
