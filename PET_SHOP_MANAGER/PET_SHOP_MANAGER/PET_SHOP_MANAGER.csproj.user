@@ -4,6 +4,9 @@
     <Compile Update="AddProductType.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -22,7 +25,7 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Product.cs">
+    <Compile Update="frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

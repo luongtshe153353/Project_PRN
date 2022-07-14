@@ -31,14 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -67,6 +59,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,7 +85,7 @@
             this.panel1.Location = new System.Drawing.Point(255, 297);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 322);
+            this.panel1.Size = new System.Drawing.Size(900, 400);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -118,66 +118,9 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(921, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(875, 230);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Id";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Full Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Phone";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Email";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Sex";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Address";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "DataOfBirth";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Status";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column7.Width = 125;
             // 
             // label7
             // 
@@ -355,7 +298,7 @@
             this.panel2.Location = new System.Drawing.Point(255, 44);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(927, 185);
+            this.panel2.Size = new System.Drawing.Size(900, 200);
             this.panel2.TabIndex = 17;
             // 
             // vbButton9
@@ -368,7 +311,7 @@
             this.vbButton9.FlatAppearance.BorderSize = 0;
             this.vbButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton9.ForeColor = System.Drawing.Color.White;
-            this.vbButton9.Location = new System.Drawing.Point(748, 134);
+            this.vbButton9.Location = new System.Drawing.Point(680, 127);
             this.vbButton9.Name = "vbButton9";
             this.vbButton9.Size = new System.Drawing.Size(176, 36);
             this.vbButton9.TabIndex = 14;
@@ -387,7 +330,7 @@
             this.vbButton8.FlatAppearance.BorderSize = 0;
             this.vbButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton8.ForeColor = System.Drawing.Color.White;
-            this.vbButton8.Location = new System.Drawing.Point(644, 134);
+            this.vbButton8.Location = new System.Drawing.Point(576, 127);
             this.vbButton8.Name = "vbButton8";
             this.vbButton8.Size = new System.Drawing.Size(98, 36);
             this.vbButton8.TabIndex = 13;
@@ -406,7 +349,7 @@
             this.vbButton7.FlatAppearance.BorderSize = 0;
             this.vbButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton7.ForeColor = System.Drawing.Color.White;
-            this.vbButton7.Location = new System.Drawing.Point(539, 134);
+            this.vbButton7.Location = new System.Drawing.Point(471, 127);
             this.vbButton7.Name = "vbButton7";
             this.vbButton7.Size = new System.Drawing.Size(97, 36);
             this.vbButton7.TabIndex = 12;
@@ -476,7 +419,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(617, 22);
+            this.label3.Location = new System.Drawing.Point(672, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 5;
@@ -484,7 +427,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(680, 16);
+            this.textBox3.Location = new System.Drawing.Point(735, 15);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(162, 27);
             this.textBox3.TabIndex = 4;
@@ -535,12 +478,68 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Employee List";
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Id";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 60;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Full Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Phone";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Email";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Sex";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Address";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "DataOfBirth";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Status";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column7.Width = 125;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(1199, 632);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.vbButton6);

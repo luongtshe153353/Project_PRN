@@ -47,7 +47,25 @@ namespace PET_SHOP_MANAGER
         private void vbButton3_Click(object sender, EventArgs e)
         {
             Employee form = new Employee(id,role);
-            form.Show();
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton2_Click(object sender, EventArgs e)
+        {
+            frmProduct form = new frmProduct(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton5_Click(object sender, EventArgs e)
+        {
+            Billing form = new Billing(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
         }
     }
 }

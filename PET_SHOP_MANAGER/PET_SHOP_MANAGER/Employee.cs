@@ -182,12 +182,13 @@ namespace PET_SHOP_MANAGER
         {
             if(role == 1)
             {
-               ChangePassword form = new ChangePassword(idacc,1);
+               ChangePassword form = new ChangePassword(IdSelect,1);
                form.Show();
             }
             if(role == 2)
             {
-                
+                ChangePassword form = new ChangePassword(idacc, 2);
+                form.Show();
             }
         }
 

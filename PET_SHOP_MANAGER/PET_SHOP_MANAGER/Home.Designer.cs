@@ -299,6 +299,7 @@
             this.vbButton2.Text = "PRODUCT";
             this.vbButton2.TextColor = System.Drawing.Color.White;
             this.vbButton2.UseVisualStyleBackColor = false;
+            this.vbButton2.Click += new System.EventHandler(this.vbButton2_Click);
             // 
             // vbButton3
             // 
@@ -354,6 +355,7 @@
             this.vbButton5.Text = "BILLING";
             this.vbButton5.TextColor = System.Drawing.Color.White;
             this.vbButton5.UseVisualStyleBackColor = false;
+            this.vbButton5.Click += new System.EventHandler(this.vbButton5_Click);
             // 
             // vbButton6
             // 

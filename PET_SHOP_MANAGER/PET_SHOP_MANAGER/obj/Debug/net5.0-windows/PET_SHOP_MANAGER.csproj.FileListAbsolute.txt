@@ -73,6 +73,7 @@ C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\n
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Home.resources
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.AddProductType.resources
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Employee.resources
-C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Product.resources
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\bin\Debug\net5.0-windows\appsettings.json
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.ChangePassword.resources
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.frmProduct.resources
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Billing.resources

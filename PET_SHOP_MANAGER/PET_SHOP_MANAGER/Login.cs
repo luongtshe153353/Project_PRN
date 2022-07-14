@@ -49,9 +49,10 @@ namespace PET_SHOP_MANAGER
                     int id = list[0].Id;
                     int role = (int)list[0].Role;
                     Home form = new Home(id,role);
-                    form.Show();
-                    Login formClose = new Login();
-                    formClose.Close();
+                    Program.SetMainContent(form);    
+                    Program.ShowMainContent();
+                    this.Close();
+                    
                 }
                 
             }
