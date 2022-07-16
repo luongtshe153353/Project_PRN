@@ -26,114 +26,135 @@ namespace PET_SHOP_MANAGER
         {
 
         }
-        public void Form_Load(string type,string time)
+        public void Form_Load(string type,DateTime time)
         {
             
-            DateTime d = DateTime.Parse(dateTimePicker1.Value.ToString());
+       
             using(var context = new PET_SHOP_MANAGERContext())
             {
-                double dog=0;
-                double cat=0;
-                double Orther=0;
-                double Total=0;
+                
                 List<OrderDetail> orderDetails = context.OrderDetails.ToList();
                 List<Order> orders = context.Orders.ToList();
                 List<Product> products = context.Products.ToList();
                  
                 if (type.Equals("Year"))
                 {
+                    double dog = 0;
+                    double cat = 0;
+                    double Orther = 0;
+                    double Total = 0;
                     var query = (from o in orders
                                  join od in orderDetails on o.Id equals od.Idorder
                                  join pr in products on od.Product equals pr.Id
-                                 where DateTime.Parse(o.Date.ToString()).Year == d.Year
                                  select new
                                  {
                                      o.Date,
-                                     o.Total,
-                                     pr.Type
-                                 });
-                    foreach(var item in query)
-                    {
-                        if(item.Type == 1)
-                        {
-                            dog = double.Parse(item.Total.ToString())+dog;
-                        }
-                        if(item.Type == 2)
-                        {
-                            cat = double.Parse(item.Total.ToString()) + cat;
-                        }
-                        if(item.Type !=1 && item.Type != 2)
-                        {
-                            Orther = double.Parse(item.Total.ToString()) + Orther;
-                        }
-                        Total = dog + cat + Orther;
-                        label5.Text = dog + "$";
-                        label6.Text = cat +"$";
-                        label7.Text = Orther + "$";
-                        label8.Text = Total + "$";
-                    }
-                }
-                else if (type.Equals("Month"))
-                {
-                    var query = (from o in orders
-                                 join od in orderDetails on o.Id equals od.Idorder
-                                 join pr in products on od.Product equals pr.Id
-                                 where DateTime.Parse(o.Date.ToString()).Year == d.Year 
-                                 && DateTime.Parse(o.Date.ToString()).Month == d.Month
-                                 select new
-                                 {
-                                     o.Date,
-                                     o.Total,
+                                     pr.Price,
+                                     od.Quantity,
                                      pr.Type
                                  });
                     foreach (var item in query)
                     {
-                        if (item.Type == 1)
+                        if (DateTime.Parse(item.Date.ToString()).Year == time.Year)
                         {
-                            dog = double.Parse(item.Total.ToString()) + dog;
+                            if (item.Type == 1)
+                            {
+                                dog = double.Parse((item.Price * item.Quantity).ToString()) + dog;
+                            }
+                            if (item.Type == 2)
+                            {
+                                cat = double.Parse((item.Price * item.Quantity).ToString()) + cat;
+                            }
+                            if (item.Type != 1 && item.Type != 2)
+                            {
+                                Orther = double.Parse((item.Price * item.Quantity).ToString()) + Orther;
+                            }
                         }
-                        if (item.Type == 2)
+                            Total = dog + cat + Orther;
+                            label5.Text = dog + "$";
+                            label6.Text = cat + "$";
+                            label7.Text = Orther + "$";
+                            label8.Text = Total + "$";
+                        }
+                    
+                }
+                else if (type.Equals("Month"))
+                {
+                    double dog = 0;
+                    double cat = 0;
+                    double Orther = 0;
+                    double Total = 0;
+                    var query = (from o in orders
+                                 join od in orderDetails on o.Id equals od.Idorder
+                                 join pr in products on od.Product equals pr.Id
+                                 select new
+                                 {
+                                     o.Date,
+                                     pr.Price,
+                                     od.Quantity,
+                                     pr.Type
+                                 });
+                    foreach (var item in query)
+                    {
+                        if (DateTime.Parse(item.Date.ToString()).Year == time.Year 
+                            && DateTime.Parse(item.Date.ToString()).Month == time.Month)
                         {
-                            cat = double.Parse(item.Total.ToString()) + cat;
+                            if (item.Type == 1)
+                            {
+                                dog = double.Parse((item.Price * item.Quantity).ToString()) + dog;
+                            }
+                            if (item.Type == 2)
+                            {
+                                cat = double.Parse((item.Price * item.Quantity).ToString()) + cat;
+                            }
+                            if (item.Type != 1 && item.Type != 2)
+                            {
+                                Orther = double.Parse((item.Price * item.Quantity).ToString()) + Orther;
+                            }
                         }
-                        if (item.Type != 1 && item.Type != 2)
-                        {
-                            Orther = double.Parse(item.Total.ToString()) + Orther;
-                        }
-                        Total = dog + cat + Orther ;
+                        Total = dog + cat + Orther;
                         label5.Text = dog + "$";
                         label6.Text = cat + "$";
                         label7.Text = Orther + "$";
                         label8.Text = Total + "$";
+                    
                     }
                 }
-               else if (type.Equals("Month"))
+               else if (type.Equals("Day"))
                 {
+                    double dog = 0;
+                    double cat = 0;
+                    double Orther = 0;
+                    double Total = 0;
                     var query = (from o in orders
                                  join od in orderDetails on o.Id equals od.Idorder
                                  join pr in products on od.Product equals pr.Id
-                                 where DateTime.Parse(o.Date.ToString()).Year == d.Year
-                                 && DateTime.Parse(o.Date.ToString()).Month == d.Month
-                                 && DateTime.Parse(o.Date.ToString()).Day == d.Day
                                  select new
                                  {
                                      o.Date,
-                                     o.Total,
+                                     pr.Price,
+                                     od.Quantity,
                                      pr.Type
                                  });
                     foreach (var item in query)
                     {
-                        if (item.Type == 1)
+                        if (DateTime.Parse(item.Date.ToString()).Year == time.Year
+                            && DateTime.Parse(item.Date.ToString()).Month == time.Month
+                            && DateTime.Parse(item.Date.ToString()).Day == time.Day)
                         {
-                            dog = double.Parse(item.Total.ToString()) + dog;
-                        }
-                        if (item.Type == 2)
-                        {
-                            cat = double.Parse(item.Total.ToString()) + cat;
-                        }
-                        if (item.Type != 1 && item.Type != 2)
-                        {
-                            Orther = double.Parse(item.Total.ToString()) + Orther;
+
+                            if (item.Type == 1)
+                            {
+                                dog = double.Parse((item.Price * item.Quantity).ToString()) + dog;
+                            }
+                            if (item.Type == 2)
+                            {
+                                cat = double.Parse((item.Price * item.Quantity).ToString()) + cat;
+                            }
+                            if (item.Type != 1 && item.Type != 2)
+                            {
+                                Orther = double.Parse((item.Price * item.Quantity).ToString()) + Orther;
+                            }
                         }
                         Total = dog + cat + Orther;
                         label5.Text = dog + "$";
@@ -143,28 +164,33 @@ namespace PET_SHOP_MANAGER
                     }
                 }
                 else if (type.Equals("Total")){
+                    double dog = 0;
+                    double cat = 0;
+                    double Orther = 0;
+                    double Total = 0;
                     var query = (from o in orders
                                  join od in orderDetails on o.Id equals od.Idorder
                                  join pr in products on od.Product equals pr.Id
                                  select new
                                  {
                                      o.Date,
-                                     o.Total,
+                                     pr.Price,
+                                     od.Quantity,
                                      pr.Type
                                  });
                     foreach (var item in query)
                     {
                         if (item.Type == 1)
                         {
-                            dog = double.Parse(item.Total.ToString()) + dog;
+                            dog = double.Parse((item.Price * item.Quantity).ToString()) + dog;
                         }
                         if (item.Type == 2)
                         {
-                            cat = double.Parse(item.Total.ToString()) + cat;
+                            cat = double.Parse((item.Price * item.Quantity).ToString()) + cat;
                         }
                         if (item.Type != 1 && item.Type != 2)
                         {
-                            Orther = double.Parse(item.Total.ToString()) + Orther;
+                            Orther = double.Parse((item.Price * item.Quantity).ToString()) + Orther;
                         }
                         Total = dog + cat + Orther;
                         label5.Text = dog + "$";
@@ -195,7 +221,7 @@ namespace PET_SHOP_MANAGER
                 }
             }
             DateTime d = DateTime.Now;
-            Form_Load("Total", d.ToString());
+            Form_Load("Total",d);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -234,7 +260,20 @@ namespace PET_SHOP_MANAGER
             Program.ShowMainContent();
             this.Close();
         }
-
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+            Home form = new Home(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+        private void vbButton6_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -248,16 +287,17 @@ namespace PET_SHOP_MANAGER
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             DateTime d = dateTimePicker1.Value;
-            string Type = comboBox1.SelectedItem.ToString();
-            MessageBox.Show(Type);
-            Form_Load(Type,d.ToString());
+            string type = comboBox1.SelectedItem.ToString();
+            Form_Load(type, d);
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedItemChanged(object sender, EventArgs e)
         {
             DateTime d = dateTimePicker1.Value;
-            string Type = comboBox1.SelectedItem.ToString();
-            Form_Load(Type, d.ToString());
+            string type = comboBox1.SelectedItem.ToString();
+            Form_Load(type, d);
         }
+
+
     }
 }

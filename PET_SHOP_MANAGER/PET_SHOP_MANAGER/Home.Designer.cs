@@ -85,7 +85,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 28);
             this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedItemChanged);
             // 
             // dateTimePicker1
             // 
@@ -249,6 +249,7 @@
             this.vbButton1.Text = "HOME";
             this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
+            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
             // 
             // vbButton2
             // 
@@ -343,6 +344,7 @@
             this.vbButton6.Text = "LOGOUT";
             this.vbButton6.TextColor = System.Drawing.Color.White;
             this.vbButton6.UseVisualStyleBackColor = false;
+            this.vbButton6.Click += new System.EventHandler(this.vbButton6_Click);
             // 
             // label12
             // 

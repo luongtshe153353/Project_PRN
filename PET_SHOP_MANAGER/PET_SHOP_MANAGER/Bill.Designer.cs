@@ -46,17 +46,18 @@
             this.vbButton1 = new CustomButton.VBButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vbButton7 = new CustomButton.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -191,7 +192,7 @@
             this.vbButton6.FlatAppearance.BorderSize = 0;
             this.vbButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton6.ForeColor = System.Drawing.Color.White;
-            this.vbButton6.Location = new System.Drawing.Point(55, 426);
+            this.vbButton6.Location = new System.Drawing.Point(55, 476);
             this.vbButton6.Name = "vbButton6";
             this.vbButton6.Size = new System.Drawing.Size(146, 44);
             this.vbButton6.TabIndex = 35;
@@ -300,6 +301,24 @@
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(587, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Employee";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(659, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(162, 27);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -349,24 +368,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(634, 218);
             this.dataGridView2.TabIndex = 22;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(587, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Employee";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(659, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 27);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Name";
@@ -407,6 +408,24 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
             // 
+            // vbButton7
+            // 
+            this.vbButton7.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton7.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton7.BorderRadius = 20;
+            this.vbButton7.BorderSize = 0;
+            this.vbButton7.FlatAppearance.BorderSize = 0;
+            this.vbButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton7.ForeColor = System.Drawing.Color.White;
+            this.vbButton7.Location = new System.Drawing.Point(55, 426);
+            this.vbButton7.Name = "vbButton7";
+            this.vbButton7.Size = new System.Drawing.Size(146, 44);
+            this.vbButton7.TabIndex = 39;
+            this.vbButton7.Text = "CART";
+            this.vbButton7.TextColor = System.Drawing.Color.White;
+            this.vbButton7.UseVisualStyleBackColor = false;
+            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -414,6 +433,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.vbButton7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.vbButton3);
@@ -470,5 +490,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private CustomButton.VBButton vbButton7;
     }
 }
