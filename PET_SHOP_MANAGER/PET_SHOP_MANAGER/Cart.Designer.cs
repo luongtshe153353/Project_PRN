@@ -1,6 +1,6 @@
 ﻿namespace PET_SHOP_MANAGER
 {
-    partial class Billing
+    partial class Cart
     {
         /// <summary>
         /// Required designer variable.
@@ -61,6 +61,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.vbButton1 = new CustomButton.VBButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +74,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.vbButton8 = new CustomButton.VBButton();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -435,6 +436,7 @@
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.vbButton1);
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Location = new System.Drawing.Point(207, 247);
@@ -453,13 +455,14 @@
             this.vbButton1.FlatAppearance.BorderSize = 0;
             this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(370, 411);
+            this.vbButton1.Location = new System.Drawing.Point(241, 411);
             this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(120, 33);
+            this.vbButton1.Size = new System.Drawing.Size(120, 44);
             this.vbButton1.TabIndex = 30;
-            this.vbButton1.Text = "PRODUCT";
+            this.vbButton1.Text = "CHECKOUT";
             this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
+            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
             // 
             // dataGridView2
             // 
@@ -467,6 +470,7 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
             this.dataGridViewTextBoxColumn2,
             this.Column4,
             this.dataGridViewTextBoxColumn4,
@@ -480,6 +484,15 @@
             this.dataGridView2.Size = new System.Drawing.Size(480, 390);
             this.dataGridView2.TabIndex = 21;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Id";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
+            this.Column8.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -517,7 +530,6 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Controls.Add(this.vbButton8);
             this.panel4.Controls.Add(this.vbButton7);
             this.panel4.Controls.Add(this.numericUpDown1);
             this.panel4.Controls.Add(this.label8);
@@ -541,7 +553,7 @@
             this.vbButton7.FlatAppearance.BorderSize = 0;
             this.vbButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton7.ForeColor = System.Drawing.Color.White;
-            this.vbButton7.Location = new System.Drawing.Point(175, 86);
+            this.vbButton7.Location = new System.Drawing.Point(344, 88);
             this.vbButton7.Name = "vbButton7";
             this.vbButton7.Size = new System.Drawing.Size(146, 44);
             this.vbButton7.TabIndex = 31;
@@ -602,23 +614,15 @@
             this.textBox9.Size = new System.Drawing.Size(115, 27);
             this.textBox9.TabIndex = 0;
             // 
-            // vbButton8
+            // label10
             // 
-            this.vbButton8.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.vbButton8.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.vbButton8.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton8.BorderRadius = 20;
-            this.vbButton8.BorderSize = 0;
-            this.vbButton8.FlatAppearance.BorderSize = 0;
-            this.vbButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton8.ForeColor = System.Drawing.Color.White;
-            this.vbButton8.Location = new System.Drawing.Point(344, 86);
-            this.vbButton8.Name = "vbButton8";
-            this.vbButton8.Size = new System.Drawing.Size(146, 44);
-            this.vbButton8.TabIndex = 32;
-            this.vbButton8.Text = "ADD TO CART";
-            this.vbButton8.TextColor = System.Drawing.Color.White;
-            this.vbButton8.UseVisualStyleBackColor = false;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(401, 419);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 26);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Name";
             // 
             // Billing
             // 
@@ -643,7 +647,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Billing";
-            this.Load += new System.EventHandler(this.Billing_Load);
+            this.Load += new System.EventHandler(this.Cart_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -651,6 +655,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -694,10 +699,6 @@
         private System.Windows.Forms.Panel panel3;
         private CustomButton.VBButton vbButton1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Panel panel4;
         private CustomButton.VBButton vbButton7;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
@@ -706,6 +707,11 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox9;
-        private CustomButton.VBButton vbButton8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label label10;
     }
 }
