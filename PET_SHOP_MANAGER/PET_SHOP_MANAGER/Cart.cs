@@ -244,7 +244,80 @@ namespace PET_SHOP_MANAGER
                         }
                     }
                 }
+                MessageBox.Show("Checkout thanh cong!");
+                for(int i =0;i<ListProduct.Count;i++)
+                {
+                    ListProduct.RemoveAt(i);
+                }
+                Form2_Load();
+
+                textBox1.Text="";
+                textBox2.Text = "";
+                textBox4.Text = "";
+                textBox3.Text = "";
+                dateTimePicker1.Value = DateTime.Now;
+                radioButton1.Checked = false;
+                radioButton2.Checked = false;
+                textBox9.Text = "";
+                textBox6.Text = "";
+                numericUpDown1.Value = 0;
             }
+        }
+
+        private void vbButton8_Click(object sender, EventArgs e)
+        {
+            Home form = new Home(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton2_Click(object sender, EventArgs e)
+        {
+            frmProduct form = new frmProduct(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton3_Click(object sender, EventArgs e)
+        {
+            Employee form = new Employee(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton4_Click(object sender, EventArgs e)
+        {
+            Custormer form = new Custormer(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton9_Click(object sender, EventArgs e)
+        {
+            Cart form = new Cart(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton5_Click(object sender, EventArgs e)
+        {
+            Bill form = new Bill(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton6_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
         }
     }
 }

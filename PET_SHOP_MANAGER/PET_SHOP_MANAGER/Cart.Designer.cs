@@ -59,6 +59,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.vbButton1 = new CustomButton.VBButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +75,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.vbButton8 = new CustomButton.VBButton();
+            this.vbButton9 = new CustomButton.VBButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -226,13 +228,14 @@
             this.vbButton6.FlatAppearance.BorderSize = 0;
             this.vbButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton6.ForeColor = System.Drawing.Color.White;
-            this.vbButton6.Location = new System.Drawing.Point(21, 495);
+            this.vbButton6.Location = new System.Drawing.Point(21, 545);
             this.vbButton6.Name = "vbButton6";
             this.vbButton6.Size = new System.Drawing.Size(146, 44);
             this.vbButton6.TabIndex = 26;
             this.vbButton6.Text = "LOGOUT";
             this.vbButton6.TextColor = System.Drawing.Color.White;
             this.vbButton6.UseVisualStyleBackColor = false;
+            this.vbButton6.Click += new System.EventHandler(this.vbButton6_Click);
             // 
             // vbButton5
             // 
@@ -244,13 +247,14 @@
             this.vbButton5.FlatAppearance.BorderSize = 0;
             this.vbButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton5.ForeColor = System.Drawing.Color.White;
-            this.vbButton5.Location = new System.Drawing.Point(21, 445);
+            this.vbButton5.Location = new System.Drawing.Point(21, 495);
             this.vbButton5.Name = "vbButton5";
             this.vbButton5.Size = new System.Drawing.Size(146, 44);
             this.vbButton5.TabIndex = 25;
-            this.vbButton5.Text = "BILLING";
+            this.vbButton5.Text = "BILL";
             this.vbButton5.TextColor = System.Drawing.Color.White;
             this.vbButton5.UseVisualStyleBackColor = false;
+            this.vbButton5.Click += new System.EventHandler(this.vbButton5_Click);
             // 
             // vbButton4
             // 
@@ -269,6 +273,7 @@
             this.vbButton4.Text = "CUSTOMER";
             this.vbButton4.TextColor = System.Drawing.Color.White;
             this.vbButton4.UseVisualStyleBackColor = false;
+            this.vbButton4.Click += new System.EventHandler(this.vbButton4_Click);
             // 
             // vbButton3
             // 
@@ -287,6 +292,7 @@
             this.vbButton3.Text = "EMPLOYEE";
             this.vbButton3.TextColor = System.Drawing.Color.White;
             this.vbButton3.UseVisualStyleBackColor = false;
+            this.vbButton3.Click += new System.EventHandler(this.vbButton3_Click);
             // 
             // vbButton2
             // 
@@ -305,6 +311,7 @@
             this.vbButton2.Text = "PRODUCT";
             this.vbButton2.TextColor = System.Drawing.Color.White;
             this.vbButton2.UseVisualStyleBackColor = false;
+            this.vbButton2.Click += new System.EventHandler(this.vbButton2_Click);
             // 
             // pictureBox2
             // 
@@ -445,6 +452,16 @@
             this.panel3.Size = new System.Drawing.Size(509, 463);
             this.panel3.TabIndex = 30;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(401, 419);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 26);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Name";
+            // 
             // vbButton1
             // 
             this.vbButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -565,6 +582,11 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(416, 38);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(74, 27);
             this.numericUpDown1.TabIndex = 10;
@@ -614,22 +636,52 @@
             this.textBox9.Size = new System.Drawing.Size(115, 27);
             this.textBox9.TabIndex = 0;
             // 
-            // label10
+            // vbButton8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(401, 419);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 26);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Name";
+            this.vbButton8.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton8.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton8.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton8.BorderRadius = 20;
+            this.vbButton8.BorderSize = 0;
+            this.vbButton8.FlatAppearance.BorderSize = 0;
+            this.vbButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton8.ForeColor = System.Drawing.Color.White;
+            this.vbButton8.Location = new System.Drawing.Point(21, 245);
+            this.vbButton8.Name = "vbButton8";
+            this.vbButton8.Size = new System.Drawing.Size(146, 44);
+            this.vbButton8.TabIndex = 42;
+            this.vbButton8.Text = "HOME";
+            this.vbButton8.TextColor = System.Drawing.Color.White;
+            this.vbButton8.UseVisualStyleBackColor = false;
+            this.vbButton8.Click += new System.EventHandler(this.vbButton8_Click);
             // 
-            // Billing
+            // vbButton9
+            // 
+            this.vbButton9.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton9.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton9.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton9.BorderRadius = 20;
+            this.vbButton9.BorderSize = 0;
+            this.vbButton9.FlatAppearance.BorderSize = 0;
+            this.vbButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton9.ForeColor = System.Drawing.Color.White;
+            this.vbButton9.Location = new System.Drawing.Point(21, 445);
+            this.vbButton9.Name = "vbButton9";
+            this.vbButton9.Size = new System.Drawing.Size(146, 44);
+            this.vbButton9.TabIndex = 48;
+            this.vbButton9.Text = "CART";
+            this.vbButton9.TextColor = System.Drawing.Color.White;
+            this.vbButton9.UseVisualStyleBackColor = false;
+            this.vbButton9.Click += new System.EventHandler(this.vbButton9_Click);
+            // 
+            // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.vbButton9);
+            this.Controls.Add(this.vbButton8);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -642,7 +694,7 @@
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimizeBox = false;
-            this.Name = "Billing";
+            this.Name = "Cart";
             this.RightToLeftLayout = true;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -713,5 +765,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label10;
+        private CustomButton.VBButton vbButton8;
+        private CustomButton.VBButton vbButton9;
     }
 }

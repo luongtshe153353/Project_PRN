@@ -78,3 +78,4 @@ C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\n
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.frmProduct.resources
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Bill.resources
 C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Cart.resources
+C:\Users\admin\Desktop\Project_PRN\PET_SHOP_MANAGER\PET_SHOP_MANAGER\obj\Debug\net5.0-windows\PET_SHOP_MANAGER.Custormer.resources

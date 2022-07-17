@@ -39,8 +39,10 @@ namespace PET_SHOP_MANAGER
                 context.TypeProducts.Add(type);
                 context.SaveChanges();
                 MessageBox.Show("Add Thanh Cong");
-                this.Close();
                 frmProduct form = new frmProduct(id,role);
+                Program.SetMainContent(form);
+                Program.ShowMainContent();
+                this.Close();
             }
         }
     }

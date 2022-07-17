@@ -213,13 +213,6 @@ namespace PET_SHOP_MANAGER
                 comboBox1.Items.Add(list[i]);
             }
             comboBox1.SelectedItem = "Total";
-            using (var context = new PET_SHOP_MANAGERContext()) {
-                List<InforAccount> info = context.InforAccounts.Where(x => x.Idacc == id).ToList();
-                foreach (InforAccount emp in info)
-                {
-                    label12.Text = emp.Fullname;
-                }
-            }
             DateTime d = DateTime.Now;
             Form_Load("Total",d);
         }
@@ -274,6 +267,13 @@ namespace PET_SHOP_MANAGER
             Program.ShowMainContent();
             this.Close();
         }
+        private void vbButton7_Click(object sender, EventArgs e)
+        {
+            Custormer form = new Custormer(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -298,6 +298,6 @@ namespace PET_SHOP_MANAGER
             Form_Load(type, d);
         }
 
-
+        
     }
 }

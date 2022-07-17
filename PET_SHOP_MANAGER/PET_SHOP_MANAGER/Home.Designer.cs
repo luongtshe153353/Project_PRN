@@ -51,8 +51,7 @@
             this.vbButton4 = new CustomButton.VBButton();
             this.vbButton5 = new CustomButton.VBButton();
             this.vbButton6 = new CustomButton.VBButton();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.vbButton7 = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -299,7 +298,7 @@
             this.vbButton4.FlatAppearance.BorderSize = 0;
             this.vbButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton4.ForeColor = System.Drawing.Color.White;
-            this.vbButton4.Location = new System.Drawing.Point(57, 368);
+            this.vbButton4.Location = new System.Drawing.Point(57, 412);
             this.vbButton4.Name = "vbButton4";
             this.vbButton4.Size = new System.Drawing.Size(146, 44);
             this.vbButton4.TabIndex = 6;
@@ -318,7 +317,7 @@
             this.vbButton5.FlatAppearance.BorderSize = 0;
             this.vbButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton5.ForeColor = System.Drawing.Color.White;
-            this.vbButton5.Location = new System.Drawing.Point(57, 418);
+            this.vbButton5.Location = new System.Drawing.Point(57, 462);
             this.vbButton5.Name = "vbButton5";
             this.vbButton5.Size = new System.Drawing.Size(146, 44);
             this.vbButton5.TabIndex = 7;
@@ -337,7 +336,7 @@
             this.vbButton6.FlatAppearance.BorderSize = 0;
             this.vbButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton6.ForeColor = System.Drawing.Color.White;
-            this.vbButton6.Location = new System.Drawing.Point(57, 468);
+            this.vbButton6.Location = new System.Drawing.Point(57, 512);
             this.vbButton6.Name = "vbButton6";
             this.vbButton6.Size = new System.Drawing.Size(146, 44);
             this.vbButton6.TabIndex = 8;
@@ -346,23 +345,24 @@
             this.vbButton6.UseVisualStyleBackColor = false;
             this.vbButton6.Click += new System.EventHandler(this.vbButton6_Click);
             // 
-            // label12
+            // vbButton7
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(130, 179);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 20);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "label12";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(62, 179);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 20);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "HELLO";
+            this.vbButton7.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton7.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton7.BorderRadius = 20;
+            this.vbButton7.BorderSize = 0;
+            this.vbButton7.FlatAppearance.BorderSize = 0;
+            this.vbButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton7.ForeColor = System.Drawing.Color.White;
+            this.vbButton7.Location = new System.Drawing.Point(57, 365);
+            this.vbButton7.Name = "vbButton7";
+            this.vbButton7.Size = new System.Drawing.Size(146, 44);
+            this.vbButton7.TabIndex = 15;
+            this.vbButton7.Text = "CUSTOMER";
+            this.vbButton7.TextColor = System.Drawing.Color.White;
+            this.vbButton7.UseVisualStyleBackColor = false;
+            this.vbButton7.Click += new System.EventHandler(this.vbButton7_Click);
             // 
             // Home
             // 
@@ -370,8 +370,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.vbButton7);
             this.Controls.Add(this.vbButton6);
             this.Controls.Add(this.vbButton5);
             this.Controls.Add(this.vbButton4);
@@ -382,6 +381,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
@@ -396,7 +396,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -421,10 +420,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private CustomButton.VBButton vbButton7;
     }
 }

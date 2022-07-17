@@ -271,5 +271,61 @@ namespace PET_SHOP_MANAGER
                 }
             }
         }
+
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+            Home form = new Home(idacc, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton3_Click(object sender, EventArgs e)
+        {
+            Employee form = new Employee(idacc, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton4_Click(object sender, EventArgs e)
+        {
+            Custormer form = new Custormer(idacc, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton10_Click(object sender, EventArgs e)
+        {
+            Cart form = new Cart(idacc, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton5_Click(object sender, EventArgs e)
+        {
+            Bill form = new Bill(idacc, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton6_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton2_Click(object sender, EventArgs e)
+        {
+            frmProduct form = new frmProduct(idacc, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
     }
 }

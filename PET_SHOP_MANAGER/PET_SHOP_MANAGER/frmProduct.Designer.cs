@@ -65,6 +65,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.vbButton4 = new CustomButton.VBButton();
             this.label8 = new System.Windows.Forms.Label();
+            this.vbButton10 = new CustomButton.VBButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -285,13 +286,14 @@
             this.vbButton6.FlatAppearance.BorderSize = 0;
             this.vbButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton6.ForeColor = System.Drawing.Color.White;
-            this.vbButton6.Location = new System.Drawing.Point(47, 456);
+            this.vbButton6.Location = new System.Drawing.Point(47, 506);
             this.vbButton6.Name = "vbButton6";
             this.vbButton6.Size = new System.Drawing.Size(146, 44);
             this.vbButton6.TabIndex = 25;
             this.vbButton6.Text = "LOGOUT";
             this.vbButton6.TextColor = System.Drawing.Color.White;
             this.vbButton6.UseVisualStyleBackColor = false;
+            this.vbButton6.Click += new System.EventHandler(this.vbButton6_Click);
             // 
             // vbButton5
             // 
@@ -303,13 +305,14 @@
             this.vbButton5.FlatAppearance.BorderSize = 0;
             this.vbButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton5.ForeColor = System.Drawing.Color.White;
-            this.vbButton5.Location = new System.Drawing.Point(47, 406);
+            this.vbButton5.Location = new System.Drawing.Point(47, 456);
             this.vbButton5.Name = "vbButton5";
             this.vbButton5.Size = new System.Drawing.Size(146, 44);
             this.vbButton5.TabIndex = 24;
-            this.vbButton5.Text = "BILLING";
+            this.vbButton5.Text = "BILL";
             this.vbButton5.TextColor = System.Drawing.Color.White;
             this.vbButton5.UseVisualStyleBackColor = false;
+            this.vbButton5.Click += new System.EventHandler(this.vbButton5_Click);
             // 
             // vbButton3
             // 
@@ -328,6 +331,7 @@
             this.vbButton3.Text = "EMPLOYEE";
             this.vbButton3.TextColor = System.Drawing.Color.White;
             this.vbButton3.UseVisualStyleBackColor = false;
+            this.vbButton3.Click += new System.EventHandler(this.vbButton3_Click);
             // 
             // vbButton2
             // 
@@ -346,6 +350,7 @@
             this.vbButton2.Text = "PRODUCT";
             this.vbButton2.TextColor = System.Drawing.Color.White;
             this.vbButton2.UseVisualStyleBackColor = false;
+            this.vbButton2.Click += new System.EventHandler(this.vbButton2_Click);
             // 
             // vbButton1
             // 
@@ -364,6 +369,7 @@
             this.vbButton1.Text = "HOME";
             this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
+            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
             // 
             // pictureBox2
             // 
@@ -377,9 +383,8 @@
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.label7);
@@ -395,7 +400,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersHeight = 29;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -409,6 +415,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.Size = new System.Drawing.Size(756, 285);
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -523,6 +530,7 @@
             this.vbButton4.Text = "CUSTOMER";
             this.vbButton4.TextColor = System.Drawing.Color.White;
             this.vbButton4.UseVisualStyleBackColor = false;
+            this.vbButton4.Click += new System.EventHandler(this.vbButton4_Click);
             // 
             // label8
             // 
@@ -534,6 +542,25 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "Product List";
             // 
+            // vbButton10
+            // 
+            this.vbButton10.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton10.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.vbButton10.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton10.BorderRadius = 20;
+            this.vbButton10.BorderSize = 0;
+            this.vbButton10.FlatAppearance.BorderSize = 0;
+            this.vbButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton10.ForeColor = System.Drawing.Color.White;
+            this.vbButton10.Location = new System.Drawing.Point(47, 406);
+            this.vbButton10.Name = "vbButton10";
+            this.vbButton10.Size = new System.Drawing.Size(146, 44);
+            this.vbButton10.TabIndex = 28;
+            this.vbButton10.Text = "CART";
+            this.vbButton10.TextColor = System.Drawing.Color.White;
+            this.vbButton10.UseVisualStyleBackColor = false;
+            this.vbButton10.Click += new System.EventHandler(this.vbButton10_Click);
+            // 
             // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -542,6 +569,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.vbButton10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.vbButton6);
@@ -554,6 +582,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product";
             this.Load += new System.EventHandler(this.Product_Load);
             this.panel2.ResumeLayout(false);
@@ -608,5 +637,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private CustomButton.VBButton vbButton4;
         private System.Windows.Forms.Label label8;
+        private CustomButton.VBButton vbButton10;
     }
 }

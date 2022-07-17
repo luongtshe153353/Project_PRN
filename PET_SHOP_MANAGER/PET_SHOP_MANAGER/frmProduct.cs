@@ -164,7 +164,9 @@ namespace PET_SHOP_MANAGER
         private void vbButton9_Click(object sender, EventArgs e)
         {
             AddProductType form = new AddProductType(id,role);
-            form.Show();
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
         }
 
         private void vbButton8_Click(object sender, EventArgs e)
@@ -198,6 +200,62 @@ namespace PET_SHOP_MANAGER
                 context.SaveChanges();
                 Form_Load(type, name);
             }
+        }
+
+        private void vbButton2_Click(object sender, EventArgs e)
+        {
+            frmProduct form = new frmProduct(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+            Home form = new Home(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton3_Click(object sender, EventArgs e)
+        {
+            Employee form = new Employee(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton4_Click(object sender, EventArgs e)
+        {
+            Custormer form = new Custormer(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton10_Click(object sender, EventArgs e)
+        {
+            Cart form = new Cart(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton5_Click(object sender, EventArgs e)
+        {
+            Bill form = new Bill(id, role);
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
+        }
+
+        private void vbButton6_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            Program.SetMainContent(form);
+            Program.ShowMainContent();
+            this.Close();
         }
     }
 }
